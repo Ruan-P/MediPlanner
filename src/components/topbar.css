@@ -1,0 +1,13 @@
+.top-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(#F865B8, #be3b83);
+    /*background-color: #F865B8;*/
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 0.4rem
+}

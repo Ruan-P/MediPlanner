@@ -1,0 +1,73 @@
+.user-body-info-section {
+    padding: 1rem;
+}
+
+.user-body-info-section p {
+    /* margin-left: 1rem; */
+    font-size: 1.05rem;
+    color: #9a9a9a;
+    font-weight: bold;
+}
+
+.user-input-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid palevioletred;
+    padding-bottom: 0.3rem;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.input-group label {
+    display: flex;
+    font-size: 1rem;
+    color: #9a9a9a;
+    font-weight: bold;
+    white-space: nowrap;
+    justify-content: center;
+    margin-top: 0.2rem;
+    margin-left: -0.7rem;
+}
+
+.input-group input {
+    flex-grow: 1;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
+}
+
+.input-group span {
+    font-size: 1rem;
+    color: #9a9a9a;
+    width: 3rem;
+    text-align: right;
+}
+
+.submit-btn {
+    display: block;
+    margin-left: auto;
+    border: 2px solid palevioletred;
+    border-radius: 0.7rem;
+    background: none;
+    padding: 0.3rem;
+    width: 4rem;
+    cursor: pointer;
+}
+
+.submit-btn:active {
+    background-color: palevioletred;
+    color: white;
+}
+
+.submit-btn.action {
+    background-color: palevioletred;
+    color: white;
+}

@@ -1,0 +1,17 @@
+.login-page-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.login-page-icon {
+    color: #d81c00;
+    font-size: 3rem;
+    border: 2px solid palevioletred;
+    border-radius: 1rem;
+    padding: 1rem;
+}

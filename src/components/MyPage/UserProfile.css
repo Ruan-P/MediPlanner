@@ -1,0 +1,28 @@
+.user-profile-container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid palevioletred;
+    padding-bottom: 2rem;
+}
+
+.user-profile-box {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.user-profile-icon {
+    color: palevioletred;
+    font-size: 3.5rem !important;
+}
+
+.user-profile-box span {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.profile-today-text {
+    margin-top: 1.3rem;
+    font-size: 0.9rem;
+    color: palevioletred;
+}

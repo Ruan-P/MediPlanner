@@ -1,0 +1,33 @@
+.medicine-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.3rem;
+    margin: 0.9rem;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid #dadada;
+    padding: 0.8rem;
+}
+
+.medicine-list-none {
+    margin-top: 0.5cm;
+    text-align: center;
+    text-decoration: underline #7a7a7a;
+}
+
+.medicine-details-btn {
+    border: none;
+    border-radius: 1rem;
+    width: 4.5rem;
+    font-size: 0.8rem;
+    height: 1.8rem;
+    color: #7a7a7a;
+    font-weight: bold;
+    background-color: #dadada;
+}
+
+.medicine-list p {
+    font-size: 0.8rem;
+    font-weight: bold;
+}

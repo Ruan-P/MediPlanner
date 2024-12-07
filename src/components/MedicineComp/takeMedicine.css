@@ -1,0 +1,68 @@
+/* .take-medicine-page {
+  background-color: #fafafa;
+  height: 100vh;
+} */
+
+.today-date {
+    display: flex;
+    justify-content: center;
+}
+
+.today-date-underArrow {
+    margin-top: 0.5rem;
+}
+
+.today-take-medicine-list {
+    align-items: center;
+    text-align: center;
+}
+
+.selectedTime-btn {
+    border: 1px solid #86b07d;
+    background-color: #f7f7f7;
+    color: #86b07d;
+    padding: 0.2rem;
+    width: 30%;
+    border-radius: 0.2rem;
+}
+
+.selectedTime-btn:hover {
+    background-color: #86b07d;
+    color: white;
+}
+
+.selectedTime-btn:active {
+    background-color: #86b07d;
+    color: white;
+}
+
+.selectedTime-btn.active {
+    background-color: #86b07d;
+    color: white;
+}
+
+.add-medication-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.add-medication-btn {
+    border: none;
+    background: none;
+    /* border: 1px solid #86b07d; */
+    /* background-color: #f7f7f7; */
+    color: #7a7a7a;
+    padding: 0.2rem;
+    width: 20%;
+    border-radius: 0.8rem;
+    margin-top: 0.6rem;
+    margin-bottom: -0.6rem;
+}
+
+.add-medication-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: -0.5rem;
+}

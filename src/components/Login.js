@@ -1,4 +1,6 @@
 import React from 'react';
+import './LoginPage.css'
+import MedicationIcon from '@mui/icons-material/Medication';
 import { GoogleLogin } from '@react-oauth/google';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -20,9 +22,18 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
-            <GoogleLogin onSuccess={onSuccess} onError={() => console.log('Login Failed')} />
+        <div className="login-page-container">
+            <MedicationIcon className="login-page-icon"/>
+            <p>로그인해서 시작하기</p>
+            <GoogleLogin onSuccess={onSuccess} onError={() => console.log('Login Failed')}
+                         theme="outline"
+                         text="signup_with"
+                         size="large"
+                         shape="pill"
+                         type="standard"
+                         logo_alignment="left"
+                         auto_select="off"
+            />
         </div>
     );
 };

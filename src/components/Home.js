@@ -13,16 +13,40 @@ const Home = () => {
         navigate('/login');
     };
 
-    return (
+    const handleSetMedicine = () => {
+        navigate('/med/add')
+    }
+
+    const handleRemoveMedicine = () => {
+        navigate('/med/remove')
+    }
+
+    const handleGetMedicine = () => {
+        navigate('/med/mypage')
+    }
+
+    const handleClickMyProfile = () => {
+        navigate('/myPage')
+    }
+
+    return (<>
         <div>
-            <h1>Welcome to the Home Page</h1>
             {user && (
                 <div>
-                    <p>Hello, {user.name}!</p>
+                    <p>{user.name}</p>
                     <button onClick={handleLogout}>Logout</button>
+                    <br/>
+                    <button onClick={handleClickMyProfile}>마이페이지</button>
+                    <br/>
+                    <button onClick={handleSetMedicine}>의약품 검색 및 등록하기</button>
+                    <br/>
+                    <button onClick={handleRemoveMedicine}>저장된 의약품 삭제하기</button>
+                    <br/>
+                    <button onClick={handleGetMedicine}>등록된 의약품 조회하기</button>
                 </div>
             )}
         </div>
+        </>
     );
 };
 
