@@ -6,9 +6,11 @@ import AlarmManager from "./functions/alramManager";
 import { useDispatch, useSelector } from "react-redux";
 import { getMedicine, resetState } from "../../store/slices/medicineSlice";
 import AddIcon from '@mui/icons-material/Add';
+import {useNavigate} from "react-router-dom";
 
 const TakeMedicine = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const { items, status, error } = useSelector(state => state.medicine.get);
     const userID = useSelector((state) => state.auth.user.id);
 
@@ -33,9 +35,9 @@ const TakeMedicine = () => {
 
     const [selectedTime, setSelectedTime] = useState("아침");
 
-    // const handelAddMedication = () => {
-    //     navigate('/medicines/add');
-    // };
+    const handelAddMedication = () => {
+        navigate('/med/add');
+    };
 
     const filteredMedications = medications.filter((medication) => {
         if (selectedTime === "아침" && medication.al_b === 1) return true;
@@ -70,7 +72,7 @@ const TakeMedicine = () => {
                     <MedicationList medications={filteredMedications}/>
                 </div>
                 <div className="add-medication-form">
-                    <button className="add-medication-btn"> {/*TO-DO # onClick 기능부여*/}
+                    <button className="add-medication-btn" onClick={handelAddMedication}>
                         <AddIcon/>
                     </button>
                 </div>

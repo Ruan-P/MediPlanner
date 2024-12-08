@@ -5,18 +5,19 @@ export const searchMedicine = createAsyncThunk(
     'medicine/search',
     async (params) => {
         console.log(params)
-        let it_name, cp_name, userId = params.userID;
+        let it_name, cp_name;
 
-        if (Object.keys(params).length === 3) {
+        if (params.query2) {
             it_name = params.query1;
             cp_name = params.query2;
-        } else if (Object.keys(params).length === 2) {
+        } else {
             it_name = params.query1;
         }
 
-        let url = `${process.env.REACT_APP_BACKEND_IP}api/medicine/search`;
-        const response = await axios.post(url, { it_name, cp_name, userId });
-        return response.data;
+        let url = `${process.env.REACT_APP_BACKEND_IP}/api/medicine/search`;
+        const response = await axios.post(url, { it_name, cp_name });
+        console.log(response.data.item)
+        return response.data.item;
     }
 );
 
@@ -46,6 +47,8 @@ export const getMedicine = createAsyncThunk(
 export const saveMedicine = createAsyncThunk(
     'medicine/save',
     async (param) => {
+        console.log(param)
+        let userId = param.userID
 
         let url = `${process.env.REACT_APP_BACKEND_IP}/api/medicine/save/`
         const response = await axios.post(url, param);
@@ -66,7 +69,7 @@ const initialState = {
         status: 'idle',
         error: null,
     }, save: {
-        items: [],
+        datas: [],
         status: 'idle',
         error: null,
     }
@@ -89,9 +92,9 @@ const medicineSlice = createSlice({
             status: 'idle',
             error: null
         }, save: {
-            items: [],
-            status: 'idle',
-            error: null,
+            g_items: [],
+            g_status: 'idle',
+            g_error: null,
         }
     },
     reducers: {
@@ -131,6 +134,17 @@ const medicineSlice = createSlice({
             .addCase(getMedicine.rejected, (state, action) => {
                 state.get.status = 'failed';
                 state.get.error = action.error.message;
+            })
+            .addCase(saveMedicine.pending, (state, action) => {
+                state.save.g_status = 'loading';
+            })
+            .addCase(saveMedicine.fulfilled, (state, action) => {
+                state.save.g_status = 'succeeded';
+                state.save.g_items = action.payload;
+            })
+            .addCase(saveMedicine.rejected, (state, action) => {
+                state.save.g_status = 'failed';
+                state.save.g_error = action.error.message;
             })
     }
 });

@@ -1,13 +1,12 @@
 .medicine-list {
     display: flex;
     justify-content: space-between;
-    margin-top: 1.3rem;
-    margin: 0.9rem;
+    margin: 0.2rem;
     gap: 2rem;
     align-items: center;
     text-align: center;
     border-bottom: 2px solid #dadada;
-    padding: 0.8rem;
+    padding: 0.5rem;
 }
 
 .medicine-list-none {
@@ -28,6 +27,20 @@
 }
 
 .medicine-list p {
+    margin: 0;
     font-size: 0.8rem;
     font-weight: bold;
 }
+
+/* 공통 스타일 */
+.switch-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+

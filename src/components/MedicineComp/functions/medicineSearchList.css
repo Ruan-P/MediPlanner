@@ -1,0 +1,75 @@
+/* 공통 스타일 */
+.switch-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* 아침 스위치 색상 */
+.switch-container.morning .slider {
+    background-color: #ffcccb; /* 연한 빨강 */
+}
+
+.switch-container.morning input:checked + .slider {
+    background-color: #ff0000; /* 빨강 */
+}
+
+/* 점심 스위치 색상 */
+.switch-container.lunch .slider {
+    background-color: #ffe4b5; /* 연한 주황 */
+}
+
+.switch-container.lunch input:checked + .slider {
+    background-color: #ffa500; /* 주황 */
+}
+
+/* 저녁 스위치 색상 *//* 공통 스타일 */
+.switch-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* 아침 스위치 색상 */
+.switch-container.morning .slider {
+    background-color: #ffcccb; /* 연한 빨강 */
+}
+
+.switch-container.morning input:checked + .slider {
+    background-color: #ff0000; /* 빨강 */
+}
+
+/* 점심 스위치 색상 */
+.switch-container.lunch .slider {
+    background-color: #ffe4b5; /* 연한 주황 */
+}
+
+.switch-container.lunch input:checked + .slider {
+    background-color: #ffa500; /* 주황 */
+}
+
+/* 저녁 스위치 색상 */
+.switch-container.dinner .slider {
+    background-color: #add8e6; /* 연한 파랑 */
+}
+
+.switch-container.dinner input:checked + .slider {
+    background-color: #0000ff; /* 파랑 */
+}
+.switch-container.dinner .slider {
+    background-color: #add8e6; /* 연한 파랑 */
+}
+
+.switch-container.dinner input:checked + .slider {
+    background-color: #0000ff; /* 파랑 */
+}

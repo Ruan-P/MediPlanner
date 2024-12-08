@@ -68,7 +68,7 @@
 }
 
 /* 스위치 스타일 */
-.switch {
+.switch_a {
     position: relative;
     display: inline-block;
     width: 2.5rem;
@@ -76,13 +76,13 @@
     margin-top: 0.4rem;
 }
 
-.switch input {
+.switch_a input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.switch label {
+.switch_a label {
     position: absolute;
     cursor: pointer;
     background-color: #ccc;
@@ -92,7 +92,7 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-.switch label:before {
+.switch_a label:before {
     position: absolute;
     content: '';
     height: 1rem;
@@ -104,11 +104,11 @@
     transition: transform 0.3s;
 }
 
-.switch input:checked + label {
+.switch_a input:checked + label {
     background-color: #86b07d;
 }
 
-.switch input:checked + label:before {
+.switch_a input:checked + label:before {
     transform: translateX(1.25rem);
 }
 
@@ -135,4 +135,8 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.test{
+    color: #8d8dc9
 }
